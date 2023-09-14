@@ -6,18 +6,50 @@ import { useState } from 'react'
 
 function App() {
   const [bookmarks, setBookmarks] = useState([]);
-const handleAddToBookmark = course =>{
+
+  const [cradithour, setcradithour] = useState(0)
+
+
+
+
+  const handleAddToBookmark = (course, credit) =>{
   // console.log('bookmark added soon')
   // console.log(course)
   const newBookmarks = [...bookmarks, course];
-  setBookmarks(newBookmarks)
+  setBookmarks(newBookmarks);
+    handleCraditHour(credit);
 }
+
+const handleCraditHour = time =>{
+
+const newCraditHour = cradithour + time;
+setcradithour(newCraditHour);
+  console.log('time dekhabo total', time);
+  // console.log(typeof time)
+
+
+}
+  // console.log('time dekhabo total', time);
+
+
+
+
   return (
     <>
     <Header></Header>
    <div className='md:flex max-w-7xl mx-auto mt-20'>
-        <Courses handleAddToBookmark={handleAddToBookmark}></Courses>
-   <Bookmarks bookmarks={bookmarks}></Bookmarks>
+        <Courses handleAddToBookmark={handleAddToBookmark}
+        
+          handleCraditHour={handleCraditHour}
+        
+        ></Courses>
+   <Bookmarks bookmarks={bookmarks}
+
+          cradithour={cradithour}
+   
+   
+   
+   ></Bookmarks>
    </div>
      
     </>

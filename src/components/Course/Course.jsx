@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import { FaBookmark}  from 'react-icons/fa';
 
 
-const Course = ({ course, handleAddToBookmark }) => {
+const Course = ({ course, handleAddToBookmark, handleCraditHour }) => {
 
 
     const { course_name, image, course_details, Price, credit } = course;
@@ -20,13 +20,15 @@ const Course = ({ course, handleAddToBookmark }) => {
                     <span> $ Price: {Price}</span>
                 </div>
                 <div>
-                    <span className='flex mr-3 gap-2'> <FaBookmark></FaBookmark>Credit:{credit}hr</span>
+                    <span onClick={handleCraditHour} className='flex mr-3 gap-2'> <FaBookmark></FaBookmark>Credit:{credit}hr</span>
 
                 </div>
 
             </div>
-            <button onClick={()=> handleAddToBookmark(course)} 
+            <button onClick={() => handleAddToBookmark(course, credit)} 
             className='bg-[#2F80ED] rounded-xl text-white w-full p-4 mt-4' type="submit">Select</button>
+            {/* <button onClick={() => handleCraditHour(credit) } 
+            className='bg-[#2F80ED] rounded-xl text-white w-full p-4 mt-4' type="submit">Select</button> */}
 
         </div>
 
