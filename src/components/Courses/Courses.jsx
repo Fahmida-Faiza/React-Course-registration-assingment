@@ -11,8 +11,8 @@ const Courses = () => {
         .then(data => setCourse(data))
     },[])
     return (
-        <div className="md:w-2/3">
-            <h1 className="text-4xl">course: {courses.length}</h1>
+        <div className="grid grid-cols-3 gap-3">
+            {/* <h1 className="text-4xl">course: {courses.length}</h1> */}
             {
 
                 courses.map( course => <Course 

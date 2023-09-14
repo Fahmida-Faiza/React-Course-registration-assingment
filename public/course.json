@@ -31,7 +31,7 @@
       "course_name": "Introduction to OOP Python",
       "credit": 2,
       "Price": 80,
-      "course_details": "",
+      "course_details": "This course covers the fundamental concepts of python programming language and its applications in data structures and algorithms.",
       "image":"https://i.ibb.co/6ypZWmf/Rectangle-2.png"
       
     },
