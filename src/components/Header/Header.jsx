@@ -2,9 +2,11 @@
 
 const Header = () => {
     return (
-        <div>
-            <h1 className='text-3xl bg-red-300'>Course Registration</h1>
-        </div>
+        <header>
+            <h1 className='text-5xl text-center'>Course Registration</h1>
+            <hr></hr>
+            <img src="" alt="" />
+        </header>
     );
 };
 

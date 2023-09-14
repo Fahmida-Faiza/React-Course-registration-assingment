@@ -1,14 +1,7 @@
-import { useEffect, useState } from "react";
+import PropTypes from 'prop-types'; // ES6
 
-
-const Course = () => {
-    const [course, setCourse] = useState([]);
-    useEffect( ()=>{
-
-        fetch('course.json')
-        .then(res => res.json())
-        .then(data => console.log(data))
-    },[])
+const Course = ({course}) => {
+    console.log(course)
     return (
         <div>
             
@@ -16,4 +9,8 @@ const Course = () => {
     );
 };
 
+
+Course.propTypes = {
+    course: PropTypes.object.isRequired
+}
 export default Course;
