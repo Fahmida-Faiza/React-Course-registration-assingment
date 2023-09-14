@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import Course from "../Course/Course";
+import PropTypes from 'prop-types'
 
-
-const Courses = () => {
+const Courses = ({handleAddToBookmark}) => {
    const [courses, setCourse] = useState([]);
     useEffect( ()=>{
 
@@ -18,6 +18,7 @@ const Courses = () => {
                 courses.map( course => <Course 
                     key={course.id} 
                     course={course}
+                    handleAddToBookmark={handleAddToBookmark}
                     
                     
                     ></Course>)
@@ -26,5 +27,9 @@ const Courses = () => {
         </div>
     );
 };
+
+Courses.propTypes = {
+    handleAddToBookmark: PropTypes.func
+}
 
 export default Courses;
