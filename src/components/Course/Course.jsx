@@ -1,7 +1,6 @@
-import PropTypes from 'prop-types'; // ES6
 
-const Course = ({course}) => {
-    console.log(course)
+
+const Course = () => {
     return (
         <div>
             
@@ -9,8 +8,4 @@ const Course = ({course}) => {
     );
 };
 
-
-Course.propTypes = {
-    course: PropTypes.object.isRequired
-}
 export default Course;

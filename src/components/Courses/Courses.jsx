@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 
 
-const Course = () => {
-    const [course, setCourse] = useState([]);
+const Courses = () => {
+   const [courses, setCourse] = useState([]);
     useEffect( ()=>{
 
         fetch('course.json')
@@ -11,9 +11,10 @@ const Course = () => {
     },[])
     return (
         <div className="md:w-2/3">
-            <h1 className="text-4xl">course: {course.length}</h1>
+            <h1 className="text-4xl">course: {courses.length}</h1>
+          
         </div>
     );
 };
 
-export default Course;
+export default Courses;
