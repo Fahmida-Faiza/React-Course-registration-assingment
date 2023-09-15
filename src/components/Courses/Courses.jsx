@@ -11,7 +11,7 @@ const Courses = ({ handleAddToBookmark, handleCraditHour, handleremaining }) => 
         .then(data => setCourse(data))
     },[])
     return (
-        <div className="grid grid-cols-3 gap-3">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
             {/* <h1 className="text-4xl">course: {courses.length}</h1> */}
             {
 
