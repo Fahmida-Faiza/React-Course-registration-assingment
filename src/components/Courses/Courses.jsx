@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import Course from "../Course/Course";
 import PropTypes from 'prop-types'
 
-const Courses = ({ handleAddToBookmark, handleCraditHour }) => {
+const Courses = ({ handleAddToBookmark, handleCraditHour, handleremaining }) => {
    const [courses, setCourse] = useState([]);
     useEffect( ()=>{
 
@@ -21,6 +21,8 @@ const Courses = ({ handleAddToBookmark, handleCraditHour }) => {
                     handleAddToBookmark={handleAddToBookmark}
 
                     handleCraditHour={handleCraditHour}
+
+                    handleremaining={handleremaining}
                     
                     
                     ></Course>)
@@ -32,7 +34,8 @@ const Courses = ({ handleAddToBookmark, handleCraditHour }) => {
 
 Courses.propTypes = {
     handleAddToBookmark: PropTypes.func,
-    handleCraditHour: PropTypes.func
+    handleCraditHour: PropTypes.func,
+    handleremaining: PropTypes.func
 }
 
 export default Courses;

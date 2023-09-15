@@ -8,7 +8,13 @@ function App() {
   const [bookmarks, setBookmarks] = useState([]);
 
   const [cradithour, setcradithour] = useState(0)
+//faiza
 
+const [remaining , setremaining] = useState(20)
+
+
+
+//
 
 
 
@@ -18,6 +24,8 @@ function App() {
   const newBookmarks = [...bookmarks, course];
   setBookmarks(newBookmarks);
     handleCraditHour(credit);
+
+    handleremaining(credit)
 }
 
 const handleCraditHour = time =>{
@@ -27,11 +35,19 @@ setcradithour(newCraditHour);
   console.log('time dekhabo total', time);
   // console.log(typeof time)
 
-
 }
   // console.log('time dekhabo total', time);
 
+//faiza
+const handleremaining = time=>{
+  const newRemaining = remaining-time;
+  setremaining(newRemaining);
+  console.log('remmainimg shw korbo' ,time)
 
+}
+
+
+//
 
 
   return (
@@ -41,11 +57,14 @@ setcradithour(newCraditHour);
         <Courses handleAddToBookmark={handleAddToBookmark}
         
           handleCraditHour={handleCraditHour}
+
+          handleremaining={handleremaining}
         
         ></Courses>
    <Bookmarks bookmarks={bookmarks}
 
           cradithour={cradithour}
+          remaining={remaining}
    
    
    

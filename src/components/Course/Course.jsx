@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import { FaBookmark}  from 'react-icons/fa';
 
 
-const Course = ({ course, handleAddToBookmark, handleCraditHour }) => {
+const Course = ({ course, handleAddToBookmark, handleCraditHour, handleremaining }) => {
 
 
     const { course_name, image, course_details, Price, credit } = course;
@@ -21,6 +21,7 @@ const Course = ({ course, handleAddToBookmark, handleCraditHour }) => {
                 </div>
                 <div>
                     <span onClick={handleCraditHour} className='flex mr-3 gap-2'> <FaBookmark></FaBookmark>Credit:{credit}hr</span>
+                    
 
                 </div>
 

@@ -2,12 +2,12 @@ import PropTypes from 'prop-types'
 import Bookmark from '../Bookmark/Bookmark';
 
 
-const Bookmarks = ({ bookmarks, cradithour }) => {
+const Bookmarks = ({ bookmarks, cradithour, remaining }) => {
     return (
         <div className="md:w-2/3 bg-white p-5 mx-5 rounded-xl">
             <div>
 
-
+                <span className='text-xl' >Total remaining hours: {remaining} </span>
                 <h3 className='text-4xl'>Cradit time : {cradithour}</h3>
 
 
@@ -23,7 +23,8 @@ const Bookmarks = ({ bookmarks, cradithour }) => {
 
 Bookmarks.propTypes= {
     bookmarks: PropTypes.array,
-    cradithour: PropTypes.number
+    cradithour: PropTypes.number,
+    remaining: PropTypes.number
 }
 
 export default Bookmarks;
