@@ -18,8 +18,13 @@ const [remaining , setremaining] = useState(20)
   // console.log('bookmark added soon')
   // console.log(course)
 
+  const a = [...bookmarks]; 
   const newBookmarks = [...bookmarks, course];
 
+  if(a.includes(course)){   
+    alert('Same course found');
+    return ;
+  }
   setBookmarks(newBookmarks);
   
   handleCraditHour(credit);
@@ -31,11 +36,11 @@ const handleCraditHour = time =>{
 
 const newCraditHour = cradithour + time;
   if (newCraditHour > 20){
-    alert('not allow');
-    return false;
+    alert('More than 20 hours');
+    return ;
   }
   setcradithour(newCraditHour);
-  console.log('time dekhabo total', time);
+  // console.log('time dekhabo total', time);
   // console.log(typeof time)
 
 }
@@ -45,11 +50,11 @@ const newCraditHour = cradithour + time;
 const handleremaining = time=>{
   const newRemaining = remaining-time;
   if (newRemaining < 0) {
-    alert('no never');
-    return false;
+    alert('Less than 0');
+    return ;
   }
   setremaining(newRemaining);
-  console.log('remmainimg shw korbo' ,time)
+  // console.log('remmainimg shw korbo' ,time)
 
 }
 

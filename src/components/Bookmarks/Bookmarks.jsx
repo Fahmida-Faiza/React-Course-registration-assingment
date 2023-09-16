@@ -15,10 +15,11 @@ const Bookmarks = ({ bookmarks, cradithour, remaining }) => {
             </div>
             {/* <h1 className="text-3xl">bookmarked blogs: {bookmarks.length}</h1> */}
             <h1 className='text-2xl mt-5 font-bold'>Course Name</h1>
-            
+            <ol className='list-inside list-decimal'>
             {
                 bookmarks.map(bookmark => <Bookmark key={bookmark.id} bookmark={bookmark}></Bookmark>)
             }
+            </ol>
             <hr />
  
             
